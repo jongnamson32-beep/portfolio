@@ -314,6 +314,19 @@ body{ background:var(--ground); color:var(--ink-head); padding-left:max(16px, en
 .deck{ max-width:1200px; margin:0 auto; display:grid; gap:20px; }
 .frame{ position:relative; width:100%; max-width:100%; aspect-ratio:16/9; overflow:hidden; border-radius:6px; box-shadow:0 1px 3px var(--frame-shadow), 0 8px 24px var(--frame-shadow); background:#FFFFFF; }
 .frame > .slide{ position:absolute; top:0; left:0; margin:0 !important; transform-origin:0 0; transform:scale(var(--s, .3125)); box-shadow:none !important; }
+.role-summary .title{ font-size:45px; }
+.role-summary .sc ul{ padding-left:1em; font-size:29px; line-height:1.5; }
+.role-summary .sc li + li{ margin-top:20px; }
+.role-summary .common{ display:block; margin-top:auto; }
+.role-summary .common a{ color:var(--blue); }
+@media print{
+  body{ padding:0; }
+  .deckhead{ display:none; }
+  .deck{ display:block; max-width:none; }
+  .frame{ width:1920px; height:1080px; aspect-ratio:auto; border-radius:0; box-shadow:none; break-after:page; }
+  .frame:last-child{ break-after:auto; }
+  .frame > .slide{ transform:none; break-after:auto; }
+}
 
 </style>
 <style id="fonts">
@@ -333,28 +346,60 @@ body{ background:var(--ground); color:var(--ink-head); padding-left:max(16px, en
 
 
 </section></div>
-<div class="frame" id="f02"><section class="slide " id="s02">
+<div class="frame" id="f02"><section class="slide role-summary" id="s02">
+  <header class="head"><h2 class="title">두 번의 창업과 B2B SaaS 구축·운영 — 세 가지 일을 직접 해 왔습니다</h2></header>
+  <div class="sum3">
+    <div class="sc">
+      <h3 class="sct">사업 기획 — 문제를 확인하고 사업 방식을 고릅니다</h3>
+      <ul>
+        <li>E-quip: 앱보다 먼저 수입차 카페(회원 약 1.5만 명)에서 거래를 열어 수요 검증</li>
+        <li>여우네: 302명 설문(90% 이상 같은 불편)으로 추진 결정, 예비창업패키지 선정</li>
+        <li>클라코리아: 외부 셀러 영입으로 일본 채널 출시 2개월 차 월 매출 약 2.5억 원</li>
+      </ul>
+    </div>
+    <div class="sc">
+      <h3 class="sct">서비스 기획 — 고객·공급자·운영자 흐름을 설계합니다</h3>
+      <ul>
+        <li>E-quip: 선결제 → 장착 → 고객 결제 → 정비소 정산 운영, 예약·거래·정산 앱 기획</li>
+        <li>자생한방병원: 요구사항 약 40개를 추가 개발 없이 처리</li>
+        <li>한국소방안전원: 교육·시험 화면 약 100개 기획 확정·개발 이관</li>
+      </ul>
+    </div>
+    <div class="sc">
+      <h3 class="sct">프로젝트 매니징 — 범위·일정·이해관계자를 맞춥니다</h3>
+      <ul>
+        <li>고객사 6곳(3곳 단독) 구축·운영, WBS로 범위·일정 관리</li>
+        <li>뷰티아이디: 기술·생산 파트너와 5인 조직 구성</li>
+        <li>커네스트: 전사 WBS·보고 체계, 신사업 TF 4개 운영 지원</li>
+      </ul>
+    </div>
+  </div>
+  <div class="common"><p><b>AI로 직접 구현</b> — IBK기업은행 교육 채점·리포트 웹 도구(과정 3개·학습자 약 60명) · 개인 프로젝트 <a href="https://github.com/jongnamson32-beep/share-vibe-project" target="_blank" rel="noopener">Share Vibe</a></p></div>
+  <div class="foot"><span>손종남 · Portfolio 2026</span><span>02 / 11</span></div>
+  <div class="progress"><i style="width:18.18%"></i></div>
+</section></div>
+<div class="frame" id="f03"><section class="slide " id="s03">
   <header class="head"><p class="eyebrow">SUMMARY</p><h2 class="title">고객 업무를 제품과 도구로 옮긴 세 가지 경험</h2></header>
   <div class="sum3"><div class="sc"><p class="sct">E-quip 정비 O2O 창업</p>
       <div class="scr"><p class="sk">담당</p><p class="sv">대표 · 상품 발굴⁠·⁠영업⁠·⁠정산 운영</p></div>
       <div class="scr"><p class="sk">판단</p><p class="sv">앱을 기다리기보다 차주가 모인 커뮤니티에서 구매⁠·⁠장착 거래를 시작</p></div>
       <div class="scr res"><p class="sk">결과</p><p class="sv">카페 판매 3개월 차 월 GMV 4천만 원 · 월 거래 20~30건, 사업 정리까지 직접 겪음</p></div>
-      <p class="spg">3쪽</p></div><div class="sc"><p class="sct">IBK 채점⁠·⁠리포트 웹 도구</p>
+      <p class="spg">4쪽</p></div><div class="sc"><p class="sct">IBK 채점⁠·⁠리포트 웹 도구</p>
       <div class="scr"><p class="sk">담당</p><p class="sv">교육 운영, 도구 기획⁠·⁠구현(Claude Code⁠·⁠Codex)</p></div>
       <div class="scr"><p class="sk">판단</p><p class="sv">과정마다 다른 채점⁠·⁠리포트 정리를 웹 도구로 처리</p></div>
       <div class="scr res"><p class="sk">결과</p><p class="sv">3개 과정⁠·⁠학습자 약 60명 교육 운영에 활용, 검수⁠·⁠보고는 직접</p></div>
-      <p class="spg">4쪽</p></div><div class="sc"><p class="sct">자생한방병원 SaaS LMS</p>
+      <p class="spg">5쪽</p></div><div class="sc"><p class="sct">자생한방병원 SaaS LMS</p>
       <div class="scr"><p class="sk">담당</p><p class="sv">요구사항 정리⁠·⁠정책 설정⁠·⁠운영 안내 · 단독</p></div>
       <div class="scr"><p class="sk">판단</p><p class="sv">새 기능 요청을 기존 설정⁠·⁠저작도구로 처리할 수 있는지 먼저 확인</p></div>
       <div class="scr res"><p class="sk">결과</p><p class="sv">요구사항 약 40개를 추가 개발 없이 처리, 일정 지연 없이 구축</p></div>
-      <p class="spg">5쪽</p></div></div>
+      <p class="spg">6쪽</p></div></div>
   <div class="common"><b>표기 기준</b><p>회사 매출, 계약 금액, 플랫폼 거래액(GMV)은 구분해 적었습니다. 측정하지 않은 효과는 수치로 쓰지 않았습니다.</p></div>
   <p class="sublabel">경력 · 총 약 8년 5개월</p>
   <div class="cstrip"><div><p class="cp">2023.08 – 현재</p><p class="cc">겟스마트</p><p class="cr">서비스전략팀 과장</p></div><div><p class="cp">2022.02 – 2023.07</p><p class="cc">클라코리아</p><p class="cr">전략기획팀 과장</p></div><div><p class="cp">2021.07 – 2021.12</p><p class="cc">뷰티아이디</p><p class="cr">창업 멤버⁠·⁠전략기획팀장</p></div><div><p class="cp">2021.02 – 2021.06</p><p class="cc">소네트</p><p class="cr">전략기획팀 과장</p></div><div><p class="cp">2019.12 – 2021.01</p><p class="cc">플랫베이스</p><p class="cr">대표(창업)</p></div><div><p class="cp">2018.02 – 2019.08</p><p class="cc">커네스트</p><p class="cr">전략기획팀 대리</p></div></div>
-<div class="foot"><span>손종남 · Portfolio 2026</span><span>02 / 10</span></div>
-<div class="progress"><i style="width:20.00%"></i></div>
+<div class="foot"><span>손종남 · Portfolio 2026</span><span>03 / 11</span></div>
+<div class="progress"><i style="width:27.27%"></i></div>
 </section></div>
-<div class="frame" id="f03"><section class="slide " id="s03">
+<div class="frame" id="f04"><section class="slide " id="s04">
   <header class="head"><p class="eyebrow">PROJECT · 플랫베이스 E-quip · 2019.12 – 2021.01 · 대표(창업)</p><h2 class="title">수입차 부품 구매와 장착을 연결한 O2O 서비스</h2></header>
   <p class="lead">고객과 정비소를 직접 모아 거래를 만들었습니다</p>
   <div class="split tight">
@@ -362,26 +407,26 @@ body{ background:var(--ground); color:var(--ink-head); padding-left:max(16px, en
     <div class="side"><p class="sidelabel">KEY NUMBERS</p><div class="kpi blue"><p class="big">4천만 원</p><p class="small">월 GMV · 카페 판매 3개월 차</p></div><div class="kpi "><p class="big">약 40%</p><p class="small">결제액 대비 마진</p></div><div class="kpi "><p class="big">약 10곳</p><p class="small">직접 영업한 정비소</p></div></div>
   </div>
   <div class="bf"><p class="bfl">거래 1건</p><div class="line"><p class="nd">카페에서 구매⁠·⁠장착 신청</p><span class="ar">→</span><p class="nd">부품비 선결제</p><span class="ar">→</span><p class="nd">정비소 연결⁠·⁠장착</p><span class="ar">→</span><p class="nd">고객 결제</p><span class="ar">→</span><p class="nd">정비소 정산</p></div></div>
-<div class="foot"><span>손종남 · Portfolio 2026</span><span>03 / 10</span></div>
-<div class="progress"><i style="width:30.00%"></i></div>
+<div class="foot"><span>손종남 · Portfolio 2026</span><span>04 / 11</span></div>
+<div class="progress"><i style="width:36.36%"></i></div>
 </section></div>
-<div class="frame" id="f04"><section class="slide " id="s04">
+<div class="frame" id="f05"><section class="slide " id="s05">
   <header class="head"><p class="eyebrow">PROJECT · 겟스마트 · 운영 도구</p><h2 class="title">IBK 교육의 반복 채점⁠·⁠리포트 작업을 웹 도구로 처리</h2></header>
   <div class="meta"><div><p class="k">대상</p><p class="v">IBK기업은행 후선직원 교육</p></div><div><p class="k">내 역할</p><p class="v">교육 운영 · 도구 기획⁠·⁠구현</p></div><div><p class="k">구현</p><p class="v">Claude Code · Codex</p></div><div><p class="k">사용</p><p class="v">교육 운영 담당(본인)</p></div></div>
   <div class="rows"><div class="row "><p class="rk">문제</p><p class="rv">과정마다 채점 기준이 달라, 답변을 일일이 AI에 넣어 채점하고 엑셀로 정리하는 반복 업무 발생</p></div><div class="row "><p class="rk">해결 방향</p><p class="rv">답변 엑셀을 올리면 과정별 기준을 적용해 점수⁠·⁠해설과 결과⁠·⁠리포트 엑셀을 만드는 웹 도구 구현</p></div></div>
   <div class="bf"><p class="bfl">이전</p><div class="line"><p class="nd">답변 다운로드</p><span class="ar">→</span><p class="nd">AI에 기준⁠·⁠답변 입력</p><span class="ar">→</span><p class="nd">점수⁠·⁠해설 엑셀 정리</p><span class="ar">→</span><p class="nd">메일 보고</p></div><p class="bfl">이후</p><div class="line"><p class="nd me">답변 다운로드</p><span class="ar">→</span><p class="nd me">웹 도구 업로드</p><span class="ar">→</span><p class="nd tool">과정별 점수⁠·⁠해설⁠·⁠리포트 생성</p><span class="ar">→</span><p class="nd me">결과 엑셀 다운로드</p><span class="ar">→</span><p class="nd me">검수 · 메일 보고</p></div>
     <p class="legend"><span class="lg me"></span>직접 처리　<span class="lg tool"></span>도구 처리</p></div>
   <div class="rows"><div class="row result"><p class="rk">결과</p><p class="rv">3개 과정 · 학습자 약 60명의 교육 운영에 활용. 점수⁠·⁠해설⁠·⁠리포트 정리는 도구로 처리하고 결과 검수⁠·⁠보고는 직접 수행</p></div></div>
-<div class="foot"><span>손종남 · Portfolio 2026</span><span>04 / 10</span></div>
-<div class="progress"><i style="width:40.00%"></i></div>
-</section></div>
-<div class="frame" id="f05"><section class="slide " id="s05">
-  <header class="head"><p class="eyebrow">PROJECT · 겟스마트</p><h2 class="title">요청받은 기능보다 실제 업무를 먼저 확인한 두 사례</h2></header>
-  <div class="cols"><div class="col"><p class="ch">증권사 고객사 AI 큐레이션</p><p class="cs">콘텐츠 정리 요청을 학습자의 과정 선택 문제로 구체화</p><div class="rows"><div class="row "><p class="rk">문제</p><p class="rv">콘텐츠가 수천 개라 학습자가 과정을 고르지 못하고 교육팀에 문의가 몰렸고, 고객사는 전체 콘텐츠 정리(리밸런싱)를 요청</p></div><div class="row "><p class="rk">판단</p><p class="rv">콘텐츠 수보다 선택 기준이 없는 것이 문제. 직무⁠·⁠직급⁠·⁠업무⁠·⁠목표를 기준으로 추천하면 문의가 줄 것이라고 판단</p></div><div class="row "><p class="rk">실행</p><p class="rv">직무⁠·⁠직책⁠·⁠기간별 카테고리 매핑과 학습자 입력 → AI 추천 → 과정 제시 흐름 기획</p></div><div class="row result"><p class="rk">결과⁠·⁠배운 점</p><p class="rv">담당자에게 문의가 줄었다는 의견을 들었지만, 같은 시기 콘텐츠 라인업 개편과 효과를 분리하거나 감소 폭을 측정하지 못함. 이후 개인 프로젝트에서는 사용자 검증을 위한 목표를 먼저 정함</p></div></div></div><div class="col"><p class="ch">자생한방병원 SaaS LMS</p><p class="cs">기존 설정⁠·⁠저작도구로 요구사항 약 40개 처리 · 단독 담당</p><div class="rows"><div class="row "><p class="rk">문제</p><p class="rv">법인마다 다른 필수 교육⁠·⁠신청 제한 규칙과 자체 퀴즈 편집⁠·⁠주간 PDF 강의 운영 요청까지, 일정에 비해 많은 요구사항 약 40개</p></div><div class="row "><p class="rk">판단</p><p class="rv">요청된 기능보다 고객이 하려는 업무를 먼저 보면, 새로 개발하지 않고 기존 서비스로 해결할 범위가 있다고 봄</p></div><div class="row "><p class="rk">실행⁠·⁠검증</p><p class="rv">고객사 업무 프로세스를 파악하고 개발팀과 기존 서비스로 되는 범위부터 확인. 기존 설정으로 법인⁠·⁠직급⁠·⁠직무별 정책 구성, 퀴즈⁠·⁠PDF 강의는 저작도구와 다른 고객사 운영 사례를 안내</p></div><div class="row result"><p class="rk">결과</p><p class="rv">요구사항 약 40개를 기존 설정⁠·⁠저작도구로 추가 개발 없이 처리, 일정 지연 없이 구축 완료 (구축 5천만 원 · 월 운영 약 200만 원 계약)</p></div></div></div></div>
-<div class="foot"><span>손종남 · Portfolio 2026</span><span>05 / 10</span></div>
-<div class="progress"><i style="width:50.00%"></i></div>
+<div class="foot"><span>손종남 · Portfolio 2026</span><span>05 / 11</span></div>
+<div class="progress"><i style="width:45.45%"></i></div>
 </section></div>
 <div class="frame" id="f06"><section class="slide " id="s06">
+  <header class="head"><p class="eyebrow">PROJECT · 겟스마트</p><h2 class="title">요청받은 기능보다 실제 업무를 먼저 확인한 두 사례</h2></header>
+  <div class="cols"><div class="col"><p class="ch">증권사 고객사 AI 큐레이션</p><p class="cs">콘텐츠 정리 요청을 학습자의 과정 선택 문제로 구체화</p><div class="rows"><div class="row "><p class="rk">문제</p><p class="rv">콘텐츠가 수천 개라 학습자가 과정을 고르지 못하고 교육팀에 문의가 몰렸고, 고객사는 전체 콘텐츠 정리(리밸런싱)를 요청</p></div><div class="row "><p class="rk">판단</p><p class="rv">콘텐츠 수보다 선택 기준이 없는 것이 문제. 직무⁠·⁠직급⁠·⁠업무⁠·⁠목표를 기준으로 추천하면 문의가 줄 것이라고 판단</p></div><div class="row "><p class="rk">실행</p><p class="rv">직무⁠·⁠직책⁠·⁠기간별 카테고리 매핑과 학습자 입력 → AI 추천 → 과정 제시 흐름 기획</p></div><div class="row result"><p class="rk">결과⁠·⁠배운 점</p><p class="rv">담당자에게 문의가 줄었다는 의견을 들었지만, 같은 시기 콘텐츠 라인업 개편과 효과를 분리하거나 감소 폭을 측정하지 못함. 이후 개인 프로젝트에서는 사용자 검증을 위한 목표를 먼저 정함</p></div></div></div><div class="col"><p class="ch">자생한방병원 SaaS LMS</p><p class="cs">기존 설정⁠·⁠저작도구로 요구사항 약 40개 처리 · 단독 담당</p><div class="rows"><div class="row "><p class="rk">문제</p><p class="rv">법인마다 다른 필수 교육⁠·⁠신청 제한 규칙과 자체 퀴즈 편집⁠·⁠주간 PDF 강의 운영 요청까지, 일정에 비해 많은 요구사항 약 40개</p></div><div class="row "><p class="rk">판단</p><p class="rv">요청된 기능보다 고객이 하려는 업무를 먼저 보면, 새로 개발하지 않고 기존 서비스로 해결할 범위가 있다고 봄</p></div><div class="row "><p class="rk">실행⁠·⁠검증</p><p class="rv">고객사 업무 프로세스를 파악하고 개발팀과 기존 서비스로 되는 범위부터 확인. 기존 설정으로 법인⁠·⁠직급⁠·⁠직무별 정책 구성, 퀴즈⁠·⁠PDF 강의는 저작도구와 다른 고객사 운영 사례를 안내</p></div><div class="row result"><p class="rk">결과</p><p class="rv">요구사항 약 40개를 기존 설정⁠·⁠저작도구로 추가 개발 없이 처리, 일정 지연 없이 구축 완료 (구축 5천만 원 · 월 운영 약 200만 원 계약)</p></div></div></div></div>
+<div class="foot"><span>손종남 · Portfolio 2026</span><span>06 / 11</span></div>
+<div class="progress"><i style="width:54.55%"></i></div>
+</section></div>
+<div class="frame" id="f07"><section class="slide " id="s07">
   <header class="head"><p class="eyebrow">PROJECT · 클라코리아 · 신규 채널</p><h2 class="title">외부 셀러와 시작해 사내 운영으로 전환한 일본 판매 채널</h2></header>
   <div class="meta"><div><p class="k">채널</p><p class="v">Amazon JP · Qoo10</p></div><div><p class="k">내 역할</p><p class="v">시장 조사⁠·⁠목표 설정⁠·⁠셀러 영입⁠·⁠운영 구축</p></div><div><p class="k">회사</p><p class="v">클라코리아 전략기획팀</p></div><div><p class="k">상황</p><p class="v">해외 판매 조직⁠·⁠경험자 없음</p></div></div>
   <p class="qlabel"><b>판단할 문제</b> : 해외 판매 조직이 없는 상황에서 신규 채널을 어떻게 시작할 것인가 (국내 마스크 재고 100만 장 이상)</p>
@@ -392,31 +437,31 @@ body{ background:var(--ground); color:var(--ink-head); padding-left:max(16px, en
     <div class="opt next"><p class="ot">이후</p><p class="oh">사내 운영 전환 제안</p><p class="ob">목표 매출 도달 후 제안, 셀러가 합류해 한 팀으로 운영</p></div>
   </div>
   <div class="rows"><div class="row "><p class="rk">실행⁠·⁠검증</p><p class="rv">아마존⁠·⁠큐텐 매니저 미팅으로 시장 조사⁠·⁠목표 매출 설정. 외부 셀러 영입, 팀 구성, 상세페이지 기획과 판매 운영</p></div><div class="row result"><p class="rk">결과</p><p class="rv">출시 2개월 차 회사 채널 합계 월 매출 약 2.5억 원 (아마존JP 약 2억 · 큐텐 약 5천만 원), 셀러가 사내 합류</p></div><div class="row learn"><p class="rk">배운 점</p><p class="rv">국내 판매 데이터를 일본 목표에 그대로 적용해 과도한 재고가 남음. 시장별 수요를 따로 검증해야 한다는 점</p></div></div>
-<div class="foot"><span>손종남 · Portfolio 2026</span><span>06 / 10</span></div>
-<div class="progress"><i style="width:60.00%"></i></div>
+<div class="foot"><span>손종남 · Portfolio 2026</span><span>07 / 11</span></div>
+<div class="progress"><i style="width:63.64%"></i></div>
 </section></div>
-<div class="frame" id="f07"><section class="slide " id="s07">
+<div class="frame" id="f08"><section class="slide " id="s08">
   <header class="head"><p class="eyebrow">PROJECT · 겟스마트 · 공공 SI</p><h2 class="title">교육⁠·⁠시험과 연관된 5개 파트의 업무 연계 기획</h2></header>
   <div class="meta"><div><p class="k">사업</p><p class="v">한국소방안전원 종합정보시스템⁠·⁠대민 플랫폼</p></div><div><p class="k">전체 규모</p><p class="v">약 60억 원 (사업 전체)</p></div><div><p class="k">내 담당</p><p class="v">교육⁠·⁠시험 파트 기획 · 2024.05 – 2025.12</p></div><div><p class="k">산출물</p><p class="v">교육⁠·⁠시험 화면 약 100개 기획</p></div></div>
   <div class="rows"><div class="row "><p class="rk">문제</p><p class="rv">고객⁠·⁠실무교육⁠·⁠자격증교육⁠·⁠시험⁠·⁠회계 파트마다 업무 절차와 교육 신청⁠·⁠결제 방식이 달라 시스템이 복잡해져 있었습니다.</p></div></div>
   <div class="steps three"><div class="step on"><p class="sn num">01</p><p class="sh">연계 지점 정의</p><p class="sb">화면을 먼저 그리기보다 5개 파트가 만나는 지점을 먼저 정리</p></div><div class="step on"><p class="sn num">02</p><p class="sh">공통 흐름과 예외</p><p class="sb">공통으로 묶을 흐름과 파트별 예외 규칙을 나눔</p></div><div class="step on"><p class="sn num">03</p><p class="sh">구현 범위 조정</p><p class="sb">개발팀과 구현 범위를 정하고, 구현이 어려운 절차는 고객사와 조정</p></div></div>
   <div class="rows"><div class="row result"><p class="rk">결과</p><p class="rv">교육⁠·⁠시험 화면 약 100개의 기획을 확정해 개발로 이관하고, 기획⁠·⁠개발⁠·⁠디자인 산출물을 작성</p></div><div class="row learn"><p class="rk">배운 점</p><p class="rv">파트별 요청을 검토할 때 업무가 이어지는 지점을 함께 확인해야 공통 규칙과 예외를 구분할 수 있다는 점</p></div></div>
-<div class="foot"><span>손종남 · Portfolio 2026</span><span>07 / 10</span></div>
-<div class="progress"><i style="width:70.00%"></i></div>
-</section></div>
-<div class="frame" id="f08"><section class="slide " id="s08">
-  <header class="head"><p class="eyebrow">PROJECT · 클라코리아 · 뷰티아이디</p><h2 class="title">시장 조사와 고객 조사를 활용한 초기 사업 기획</h2></header>
-  <div class="cols"><div class="col"><p class="ch">세탁캡슐 신규 카테고리 · 클라코리아</p><p class="cs">물티슈와 비교해 다음 카테고리 선택</p><div class="rows"><div class="row "><p class="rk">문제</p><p class="rv">마스크 매출이 계속 줄어 다음 카테고리가 필요했지만 자체 생산 설비가 없었고, 회사는 물티슈 사업을 준비 중</p></div><div class="row "><p class="rk">판단</p><p class="rv">성장이 둔화된 물티슈보다 성장하는 시장을 찾아야 한다고 보고, 국내⁠·⁠일본⁠·⁠미국⁠·⁠중국 시장 분석으로 세탁캡슐 제안</p></div><div class="row "><p class="rk">실행</p><p class="rv">자체 설비 없이 중국⁠·⁠국내 공장 컨소시엄을 구성해 사업계획과 생산 협력 진행</p></div><div class="row result"><p class="rk">결과</p><p class="rv">세탁캡슐 카테고리 월 매출 10억 원 목표 달성 (회사 카테고리 실적)</p></div></div></div><div class="col"><p class="ch">AI 맞춤 셀프네일 · 뷰티아이디⁠·⁠소네트</p><p class="cs">302명 설문으로 사업 추진 판단</p><div class="rows"><div class="row "><p class="rk">문제</p><p class="rv">기성 셀프네일이 개인별 손톱 모양에 맞지 않는 문제에서 출발. 아이디어만 있고 자본⁠·⁠인력이 없는 상태에서 창업 멤버로 사업화를 맡음</p></div><div class="row "><p class="rk">가설⁠·⁠검증</p><p class="rv">20~40대 302명 설문에서 응답자 90% 이상이 같은 불편을 느낀다고 답함. 이 결과를 사업 추진 근거로 삼아 사업계획과 서비스 흐름 설계에 반영</p></div><div class="row "><p class="rk">실행</p><p class="rv">촬영 → AI 측정 → 맞춤 생산 → 배송 흐름과 판매 모델 설계, 예비창업패키지 선정(2021.05) 후 뷰티아이디 설립</p></div><div class="row result"><p class="rk">결과</p><p class="rv">서비스⁠·⁠생산 프로세스⁠·⁠디자이너 플랫폼 기획 완성, 기술⁠·⁠생산 파트너와 5인 조직 구성. 지원금 약 8천만 원 운영, 기술보증기금 보증 약 1억 원 확보</p></div></div></div></div>
-<div class="foot"><span>손종남 · Portfolio 2026</span><span>08 / 10</span></div>
-<div class="progress"><i style="width:80.00%"></i></div>
+<div class="foot"><span>손종남 · Portfolio 2026</span><span>08 / 11</span></div>
+<div class="progress"><i style="width:72.73%"></i></div>
 </section></div>
 <div class="frame" id="f09"><section class="slide " id="s09">
+  <header class="head"><p class="eyebrow">PROJECT · 클라코리아 · 뷰티아이디</p><h2 class="title">시장 조사와 고객 조사를 활용한 초기 사업 기획</h2></header>
+  <div class="cols"><div class="col"><p class="ch">세탁캡슐 신규 카테고리 · 클라코리아</p><p class="cs">물티슈와 비교해 다음 카테고리 선택</p><div class="rows"><div class="row "><p class="rk">문제</p><p class="rv">마스크 매출이 계속 줄어 다음 카테고리가 필요했지만 자체 생산 설비가 없었고, 회사는 물티슈 사업을 준비 중</p></div><div class="row "><p class="rk">판단</p><p class="rv">성장이 둔화된 물티슈보다 성장하는 시장을 찾아야 한다고 보고, 국내⁠·⁠일본⁠·⁠미국⁠·⁠중국 시장 분석으로 세탁캡슐 제안</p></div><div class="row "><p class="rk">실행</p><p class="rv">자체 설비 없이 중국⁠·⁠국내 공장 컨소시엄을 구성해 사업계획과 생산 협력 진행</p></div><div class="row result"><p class="rk">결과</p><p class="rv">세탁캡슐 카테고리 월 매출 10억 원 목표 달성 (회사 카테고리 실적)</p></div></div></div><div class="col"><p class="ch">AI 맞춤 셀프네일 · 뷰티아이디⁠·⁠소네트</p><p class="cs">302명 설문으로 사업 추진 판단</p><div class="rows"><div class="row "><p class="rk">문제</p><p class="rv">기성 셀프네일이 개인별 손톱 모양에 맞지 않는 문제에서 출발. 아이디어만 있고 자본⁠·⁠인력이 없는 상태에서 창업 멤버로 사업화를 맡음</p></div><div class="row "><p class="rk">가설⁠·⁠검증</p><p class="rv">20~40대 302명 설문에서 응답자 90% 이상이 같은 불편을 느낀다고 답함. 이 결과를 사업 추진 근거로 삼아 사업계획과 서비스 흐름 설계에 반영</p></div><div class="row "><p class="rk">실행</p><p class="rv">촬영 → AI 측정 → 맞춤 생산 → 배송 흐름과 판매 모델 설계, 예비창업패키지 선정(2021.05) 후 뷰티아이디 설립</p></div><div class="row result"><p class="rk">결과</p><p class="rv">서비스⁠·⁠생산 프로세스⁠·⁠디자이너 플랫폼 기획 완성, 기술⁠·⁠생산 파트너와 5인 조직 구성. 지원금 약 8천만 원 운영, 기술보증기금 보증 약 1억 원 확보</p></div></div></div></div>
+<div class="foot"><span>손종남 · Portfolio 2026</span><span>09 / 11</span></div>
+<div class="progress"><i style="width:81.82%"></i></div>
+</section></div>
+<div class="frame" id="f10"><section class="slide " id="s10">
   <header class="head"><p class="eyebrow">OTHER EXPERIENCE</p><h2 class="title">기타 경력</h2></header>
   <div class="others n3"><div class="oc"><p class="oct">ERP⁠·⁠인사정보 연계</p><p class="ocs">겟스마트 · 이미인 그룹웨어</p><p class="ock">한 일</p><p class="ocv">현장 직무의 업무 사이클을 분석해 그룹웨어 API 기반 ERP⁠·⁠인사정보 연계 기획</p><p class="ock">결과·상태</p><p class="ocv">그룹웨어 구축 약 3천만 원 · 월 운영 약 200만 원 계약, 오픈 후 1년 이상 직접 운영하고 운영팀에 인계</p></div><div class="oc"><p class="oct">전사 업무 체계 · 신사업 TF</p><p class="ocs">커네스트 · 2018–2019</p><p class="ock">한 일</p><p class="ocv">신임 본부장과 전사 WBS⁠·⁠보고 체계 수립, 신사업별 영업⁠·⁠구매⁠·⁠마케팅 TF 운영</p><p class="ock">결과·상태</p><p class="ocv">4개 신사업 TF가 같은 보고 체계로 진행, 4개 카테고리 사업⁠·⁠제품 기획</p></div><div class="oc"><p class="oct">Share Vibe (개인 프로젝트)</p><p class="ocs">2026.05 – 2026.09</p><p class="ock">한 일</p><p class="ocv">크루 생성⁠·⁠실시간 음성채팅⁠·⁠GPS⁠·⁠공유 MVP를 Claude Code⁠·⁠Codex로 1인 기획⁠·⁠구현 (Android · Supabase · Agora)</p><p class="ock">결과·상태</p><p class="ocv">개인 프로젝트의 내부 MVP 확인 완료. 공개 출시 계획 없음</p><p class="ocv"><a href="https://github.com/jongnamson32-beep/share-vibe-project" target="_blank" rel="noopener" style="color:var(--blue);font-weight:600;text-decoration:underline;text-underline-offset:4px;">서비스 소개 GitHub ↗<br><span style="font-size:20px;font-weight:500;">github.com/jongnamson32-beep/<br>share-vibe-project</span></a></p></div></div>
-<div class="foot"><span>손종남 · Portfolio 2026</span><span>09 / 10</span></div>
-<div class="progress"><i style="width:90.00%"></i></div>
+<div class="foot"><span>손종남 · Portfolio 2026</span><span>10 / 11</span></div>
+<div class="progress"><i style="width:90.91%"></i></div>
 </section></div>
-<div class="frame" id="f10"><section class="slide closing" id="s10">
+<div class="frame" id="f11"><section class="slide closing" id="s11">
   <div class="topbar"></div>
   <header class="head"><p class="eyebrow">WHAT I WANT TO OWN</p><h2 class="title big">제가<br>책임지고 싶은 일</h2></header>
   <div class="cbody"><p class="cp2">E-quip에서는 수요 확인부터 첫 거래, 월 GMV 4천만 원까지 키운 뒤 정리하기까지 제품의 생애 전체를 겪었고, 겟스마트에서는 고객사의 실제 업무를 먼저 확인해 요구사항 약 40개를 추가 개발 없이 처리했습니다. 최근에는 Claude Code⁠·⁠Codex로 운영 도구와 MVP를 직접 만들어 쓰고 있습니다.</p><p class="cp2">새 팀에서도 고객과 현업의 실제 업무를 먼저 확인하고, 반복되는 요구와 예외를 나눠 제품 기능⁠·⁠정책⁠·⁠운영 구조로 정리하겠습니다. 처음 접하는 도메인은 인터뷰와 실제 문서로 빠르게 익히겠습니다.</p><p class="cp2">출시 후에는 실제로 계속 쓰이는지, 업무 시간과 부담이 어떻게 달라졌는지 지표로 확인하며 제품의 결과까지 책임지겠습니다.</p></div>
